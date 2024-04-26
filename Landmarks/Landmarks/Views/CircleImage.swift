@@ -8,8 +8,13 @@
 import SwiftUI
 
 struct CircleImage: View {
+    
+    // inisiasi image dan menampung data Image
+    var image: Image
     var body: some View {
-        Image("turtlerock")
+        
+        //memanggil inisiasi di atas pada data image dan melakukan pengeditan image.
+        image
             .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
             .overlay{
                 Circle().stroke(.white, lineWidth: 4)
@@ -19,5 +24,5 @@ struct CircleImage: View {
 }
 
 #Preview {
-    CircleImage()
+    CircleImage(image: Image("turtlerock"))
 }

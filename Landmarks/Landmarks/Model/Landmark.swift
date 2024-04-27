@@ -9,13 +9,14 @@ import SwiftUI
 import CoreLocation
 
 // struktur data Landmark yang dapat digunakan pada setiap file yang membutuhkan data landmark
-struct Landmark: Codable, Hashable {
+struct Landmark: Codable, Hashable, Identifiable{
     // inisiasi keperluan properti Landmark
     var id: Int
     var name: String
     var park: String
     var state: String
     var description: String
+    var isFavorite: Bool
     
     // menggambil dan inisiasi data 'imageName' yang ada pada data landmark dalam bentuk UI
     private var imageName: String

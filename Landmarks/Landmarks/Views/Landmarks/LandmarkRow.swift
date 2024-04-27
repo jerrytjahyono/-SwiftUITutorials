@@ -11,6 +11,7 @@ import SwiftUI
 struct LandmarkRow: View {
     // inisiasi dari model data 'Landmark' sehingga dapat mengakses data landmark yang awalnya json
     var landmark : Landmark
+    
     var body: some View {
         HStack{
             
@@ -23,12 +24,18 @@ struct LandmarkRow: View {
             Text(landmark.name)
             
             Spacer()
+            
+            if landmark.isFavorite{
+                Image(systemName: "star.fill")
+                    .foregroundColor(.yellow)
+            }
         }
     }
 }
 
 #Preview{
-    Group {
+    let landmarks = ModelData().landmarks
+    return Group {
         LandmarkRow(landmark: landmarks[0])
         LandmarkRow(landmark: landmarks[1])
     }

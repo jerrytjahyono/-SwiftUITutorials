@@ -7,9 +7,13 @@
 
 import Foundation
 
-// Variabel menampung array dari Object 'Landmark'
-// Inisiasi melalui nilai return fungsi `load` dari hasil decode file json
-var landmarks: [Landmark] = load("landmarkData.json")
+// 
+@Observable
+class ModelData{
+    // Variabel menampung array dari Object 'Landmark'
+    // Inisiasi melalui nilai return fungsi `load` dari hasil decode file json
+    var landmarks: [Landmark] = load("landmarkData.json")
+}
 
 // Fungsi untuk melakukan read pada file json
 func load<T: Decodable>(_ filename: String) -> T {

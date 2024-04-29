@@ -14,9 +14,22 @@ class ModelData{
     // Inisiasi melalui nilai return fungsi `load` dari hasil decode file json
     var landmarks: [Landmark] = load("landmarkData.json")
     
-    //    // Variabel menampung array dari Object 'Hike'
+    // Variabel menampung array dari Object 'Hike'
     // Inisiasi melalui nilai return fungsi `load` dari hasil decode file json
     var hikes: [Hike] = load("hikeData.json")
+    
+    // inisasi isFeatured landmark nilai return fungsi 'filter'
+    var features: [Landmark] {
+        landmarks.filter { $0.isFeatured }
+    }
+    
+    // inisiasi categories dalam bentuk array String dengan nama category sebagai kunci
+    var categories: [String: [Landmark]] {
+            Dictionary(
+                grouping: landmarks,
+                by: { $0.category.rawValue }
+            )
+        }
 }
 
 // Fungsi untuk melakukan read pada file json

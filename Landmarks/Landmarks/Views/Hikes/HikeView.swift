@@ -7,6 +7,7 @@ A view displaying information about a hike, including an elevation graph.
 
 import SwiftUI
 
+// membuat tampilan dengan memuat struct graph capsule, hike detail, hike graph yang ditampilkan dan ditambahi function animasi
 extension AnyTransition {
     static var moveAndFade: AnyTransition {
         .asymmetric(

@@ -7,10 +7,17 @@
 
 import SwiftUI
 
+// membuat struct untuk membentuk background dari badge
 struct BadgeBackground: View {
     var body: some View {
+        
+        // tampilan yang mendefinisikan isi ukuran dan koordinatnya
         GeometryReader { geometry in
+            
+            // untuk membuat bentuk 2D
             Path { path in
+                
+                // menjadi nilai patokan untuk digunakan kembali dalam menampilkan bentuk hexagon
                 var width: CGFloat = min(geometry.size.width, geometry.size.height)
                 let height = width
                 let xScale: CGFloat = 0.832
@@ -23,7 +30,7 @@ struct BadgeBackground: View {
                     )
                 )
 
-
+                //untuk menampilkan bentuk background badge pada tampilan
                 HexagonParameters.segments.forEach { segment in
                     path.addLine(
                         to: CGPoint(
@@ -32,7 +39,7 @@ struct BadgeBackground: View {
                         )
                     )
 
-
+                    // membentuk shape luar background badge menjadi segi 6
                     path.addQuadCurve(
                         to: CGPoint(
                             x: width * segment.curve.x + xOffset,
@@ -45,6 +52,8 @@ struct BadgeBackground: View {
                     )
                 }
             }
+            
+            // membuat gambar berisi warna pada background badge
             .fill(.linearGradient(
                 Gradient(colors: [Self.gradientStart, Self.gradientEnd]),
                 startPoint: UnitPoint(x: 0.5, y: 0),

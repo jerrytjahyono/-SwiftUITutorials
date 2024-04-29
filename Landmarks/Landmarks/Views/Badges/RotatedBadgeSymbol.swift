@@ -10,6 +10,7 @@ import SwiftUI
 struct RotatedBadgeSymbol: View {
     let angle: Angle
     
+    // membuat logo gambar badge menjadi sedikit serong kanan
     var body: some View {
         BadgeSymbol()
             .padding(-60)

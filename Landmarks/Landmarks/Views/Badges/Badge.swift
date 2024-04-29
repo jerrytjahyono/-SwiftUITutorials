@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct Badge: View { 
+    
+    // membuat logo badge yang awalnya hanya 1 buah menjadi 8 buah dan di buat rotate agar membuat seperti bintang.
     var badgeSymbols: some View {
         ForEach(0..<8) { index in
             RotatedBadgeSymbol(
@@ -19,6 +21,8 @@ struct Badge: View {
     
     var body: some View {
         ZStack {
+            
+            // memanggil struct badge background
             BadgeBackground()
             
             GeometryReader { geometry in

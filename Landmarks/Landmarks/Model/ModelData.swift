@@ -18,6 +18,9 @@ class ModelData{
     // Inisiasi melalui nilai return fungsi `load` dari hasil decode file json
     var hikes: [Hike] = load("hikeData.json")
     
+    // inisiasi profile dari default
+    var profile = Profile.default
+    
     // inisasi isFeatured landmark nilai return fungsi 'filter'
     var features: [Landmark] {
         landmarks.filter { $0.isFeatured }

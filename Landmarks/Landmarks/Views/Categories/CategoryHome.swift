@@ -10,6 +10,7 @@ import SwiftUI
 struct CategoryHome: View {
     // inisasi ModelData yang dapat di panggil
     @Environment(ModelData.self) var modelData
+    @State private var showingProfile = false
     
     var body: some View {
         
@@ -30,9 +31,24 @@ struct CategoryHome: View {
                 }
                 .listRowInsets(EdgeInsets())
             }
+                // memberikan tampilan yang lebih pas ukuran nya dengan device
+                .listStyle(.inset)
             
                 // memberikan judul pada bagian layar split
                 .navigationTitle("Featured")
+                
+                // memberikan tampilan logo user yang ditekan akan mengeluarkan profile summary
+                .toolbar {
+                    Button {
+                        showingProfile.toggle()
+                    } label: {
+                        Label("User Profile", systemImage: "person.crop.circle")
+                    }
+                }
+                    .sheet(isPresented: $showingProfile) {
+                        ProfileHost()
+                    .environment(modelData)
+                }
         }detail: {
             Text("Select a Landmark")
         }

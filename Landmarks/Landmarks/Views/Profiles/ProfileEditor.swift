@@ -10,7 +10,7 @@ import SwiftUI
 // struct untuk membuat tampilan mengedit profile
 struct ProfileEditor: View {
     @Binding var profile: Profile
-    
+     
     // inisiasi range untuk tanggal 'Goal Date'
     var dateRange: ClosedRange<Date> {
         let min = Calendar.current.date(byAdding: .year, value: -1, to: profile.goalDate)!

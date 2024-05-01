@@ -13,7 +13,7 @@ class ModelData{
     // Variabel menampung array dari Object 'Landmark'
     // Inisiasi melalui nilai return fungsi `load` dari hasil decode file json
     var landmarks: [Landmark] = load("landmarkData.json")
-    
+     
     // Variabel menampung array dari Object 'Hike' 
     // Inisiasi melalui nilai return fungsi `load` dari hasil decode file json
     var hikes: [Hike] = load("hikeData.json")

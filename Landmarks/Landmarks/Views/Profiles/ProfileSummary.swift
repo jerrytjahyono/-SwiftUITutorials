@@ -24,7 +24,7 @@ struct ProfileSummary: View {
                 Text(profile.username)
                     .bold()
                     .font(.title)
-
+ 
 
                 Text("Notifications: \(profile.prefersNotifications ? "On": "Off" )")
                 Text("Seasonal Photos: \(profile.seasonalPhoto.rawValue)")

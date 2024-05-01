@@ -16,7 +16,7 @@ struct Profile {
 
     // inisiasi default profile
     static let `default` = Profile(username: "g_kumar")
-
+ 
     // insiasi enum untuk season
     enum Season: String, CaseIterable, Identifiable {
         case spring = "🌷"

@@ -31,7 +31,7 @@ struct ProfileHost: View {
                 Spacer()
                 EditButton()
             }
-            
+             
             // menampilkan logo edit dan dapat berinteraksi dengan menu edit
             if editMode?.wrappedValue == .inactive {
                 

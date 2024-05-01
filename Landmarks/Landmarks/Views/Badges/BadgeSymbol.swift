@@ -52,5 +52,6 @@ struct BadgeSymbol: View {
 
 
 #Preview {
+    
     BadgeSymbol()
 }

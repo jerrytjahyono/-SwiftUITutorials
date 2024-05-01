@@ -14,6 +14,7 @@ extension AnyTransition {
                  insertion: .move(edge: .trailing).combined(with: .opacity),
                  removal: .scale.combined(with: .opacity)
              )
+        
     }
 }
 

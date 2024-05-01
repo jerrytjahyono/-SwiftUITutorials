@@ -9,6 +9,7 @@ import SwiftUI
 
 // membuat struct untuk membentuk background dari badge
 struct BadgeBackground: View {
+    
     var body: some View {
         
         // tampilan yang mendefinisikan isi ukuran dan koordinatnya

@@ -7,7 +7,7 @@
 
 import Foundation
 
-// struktur data Hike yang dapat digunakan pada setiap file yang membutuhkan data landmark
+// struktur data Hike yang dapat digunakan pada setiap file yang membutuhkan data landmark, yang berisi properti tampilan Hike
 struct Hike: Codable, Hashable, Identifiable {
     var id: Int
     var name: String

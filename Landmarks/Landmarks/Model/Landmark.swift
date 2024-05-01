@@ -33,7 +33,7 @@ struct Landmark: Codable, Hashable, Identifiable{
     var image: Image {
         Image(imageName)
     }
-    
+     
     // menggambil dan inisiasi data 'coordinates' yang ada pada data landmark dalam bentuk UI
     private var coordinates: Coordinates
     var locationCoordinate: CLLocationCoordinate2D{

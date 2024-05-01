@@ -12,7 +12,6 @@ struct CategoryItem: View {
     // inisiasi data landmark
     var landmark: Landmark
 
-
     var body: some View {
         VStack(alignment: .leading) {
             

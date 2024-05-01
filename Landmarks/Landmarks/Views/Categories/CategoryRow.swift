@@ -15,7 +15,7 @@ struct CategoryRow: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            
+             
             // mengeluarkan nama dari categori
             Text(categoryName)
                 .font(.headline)
